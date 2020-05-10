@@ -1,10 +1,20 @@
 #!/bin/bash
 
-#Script utilizado para criar icones no laucher
-#Sempre executar com o sudo ou usuário root
+# Autor: Marcos Garcia
+# Versão: 0.1
+# Versão do bash 4.4.20
 
-#Caso precise instale o zenity com o comando abaixo
-#apt install zenity
+# Script utilizado para criar icones no laucher
+# Sempre executar com o sudo ou usuário root
+
+# Comando para execução: sudo bash criar_icone.sh
+
+# Evite executar com o comando (sh), por conta de compatibilidade de componentes
+
+# Necessário ter a depencência do Zenity instalada
+# Verifique existe a depêndencia com o comando (zenity --version), caso não exista instale com o comando abaixo:
+# apt install zenity
+#==================================================================================================================
 
 informacoes=""
 
@@ -43,7 +53,7 @@ montar() {
    echo "Exec=${list[3]}" >> $arquivo
    echo "Terminal=false" >> $arquivo
    echo "Type=Application" >> $arquivo
-   
+
    cp $arquivo /usr/share/applications/
    rm $arquivo
 }
