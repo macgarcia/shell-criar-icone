@@ -30,7 +30,7 @@ quantidade_das_informacoes() {
 validar() {
    if [ ! $1 -eq 4 ]; then
       zenity --error --title="Erro" --text="Preencha todos os campos do formulário" --width="250"
-      bash criar_icones.sh
+      bash criar_icone.sh
    fi
 }
 
